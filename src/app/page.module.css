@@ -1,0 +1,76 @@
+.searchBox {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  padding: 0 15px;
+}
+
+.moduleButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.contentArea {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.card {
+  display: flex;
+  flex: 1 1 calc(25% - 20px);
+  min-width: 200px;
+  padding: 20px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: fadeInUp 0.3s ease;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.01);
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+
+  50% { opacity: 0; transform: translateY(10px); }
+
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .search-box {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .search-box input {
+    width: 90%;
+  }
+}
